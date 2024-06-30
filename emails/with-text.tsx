@@ -1,6 +1,5 @@
 import {
   Body,
-  Button,
   Container,
   Font,
   Head,
@@ -13,7 +12,6 @@ import {
   Tailwind,
   Text,
 } from "@react-email/components";
-import * as React from "react";
 
 export default function WithText({
   preview,

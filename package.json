@@ -1,6 +1,7 @@
 {
   "name": "@repo/email",
   "version": "0.0.0",
+  "main": "index.ts",
   "scripts": {
     "build": "email build",
     "dev": "email dev",
