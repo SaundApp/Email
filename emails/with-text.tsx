@@ -8,7 +8,6 @@ import {
   Hr,
   Html,
   Img,
-  Link,
   Preview,
   Section,
   Tailwind,
@@ -16,14 +15,14 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-interface LinkEmailProps {
-  resetLink?: string;
-}
-
-export default function ResetPassword({
-  LinkEmailProps,
+export default function WithText({
+  preview,
+  heading,
+  text,
 }: {
-  LinkEmailProps: LinkEmailProps;
+  preview: string;
+  heading: string;
+  text: string;
 }) {
   return (
     <Tailwind
@@ -49,36 +48,30 @@ export default function ResetPassword({
             }}
           />
         </Head>
-        <Preview>Your reset password link</Preview>
+        <Preview>{preview}</Preview>
         <Body>
           <Container>
             <Img
               src="https://i.imgur.com/0JgWeqZ.png"
-              width={48}
-              height={48}
+              width={40}
+              height={40}
               draggable={false}
-              alt="Saund"
+              alt="Saund Icon"
             />
-            <Heading as="h1">Reset your password</Heading>
+            <Heading as="h1">{heading}</Heading>
 
             <Section className="my-6">
-              <Button className="bg-primary p-3 text-white rounded-2xl">
-                Reset Password
-              </Button>
-              <Text className="text-base">
-                If you didn't request this, please ignore this email.
-              </Text>
+              <Text className="text-base">{text}</Text>
             </Section>
 
             <Text className="text-base">
-              Best,
               <br />- Saund Team
             </Text>
 
-            <Hr />
+            <Hr className="border-b-muted" />
 
             <Text className="text-muted text-sm">
-              Saund Inc. 2024. All rights reserved.
+              &copy; Saund 2024. All rights reserved.
             </Text>
           </Container>
         </Body>
